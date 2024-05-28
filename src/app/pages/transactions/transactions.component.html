@@ -1,0 +1,25 @@
+<main>
+    <div class="container">
+        <div class="flex-box">
+            <div class="form-box box">
+                <a class='back-button' routerLink="/">
+                    <span class="material-symbols-outlined"> arrow_back </span>
+                </a>
+                <h1 class="title one">Cadastre transação</h1>
+                <app-register-transaction-form></app-register-transaction-form>
+            </div>
+            <app-total></app-total>
+            <ul *ngIf="transactionList.length > 0" class="transaction-list">
+                <app-transaction-card
+                    *ngFor="let transaction of transactionList"
+                    [transaction]="transaction"
+                ></app-transaction-card>
+            </ul>
+            <div *ngIf="transactionList.length === 0" class="not-transaction">
+                <p class="paragraph">
+                    Cadastre sua primeira transação.
+                </p>
+            </div>
+        </div>
+    </div>
+</main>

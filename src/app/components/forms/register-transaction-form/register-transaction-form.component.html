@@ -1,0 +1,23 @@
+<form class='form-container' (submit)="onSubmit($event)">
+    <div class="flex-box">
+        <div class='fieldBox'>
+            <label for='value'>Valor</label>
+            <input name='value' type='number' placeholder='R$' [formControl]='value'/>
+        </div>
+        <div class='fieldBox'>
+            <label for='type'>Tipo</label>
+            <select name='type' [formControl]='type'>
+                <option value='entrada'>Entrada</option>
+                <option value='saida'>Saída</option>
+            </select>
+        </div>
+    </div>
+
+    <div class='fieldBox'>
+        <label for='description'>Descrição</label>
+        <textarea name='description' placeholder='Descrição' [formControl]='description'></textarea>
+    </div>
+    <div>
+        <button class='btn solid md' type='submit'>Cadastro</button>
+    </div>
+</form>

@@ -1,0 +1,15 @@
+<li class='box'>
+    <div class="flex-box">
+        <div class='left'>
+            <span *ngIf="transaction.type === 'entrada'" class='money blue'>{{ valueToMoney() }}</span>
+            <span *ngIf="transaction.type === 'saida'" class='money red'>-{{ valueToMoney() }}</span>
+            <p class='paragraph'>{{ transaction.description }}</p>
+        </div>
+        <div class='right'>
+            <span class='paragraph'>{{ transaction.type }}</span>
+            <button (click)="handleClick()">
+                <span class="material-symbols-outlined"> delete </span>
+            </button>
+        </div>
+    </div>
+</li>

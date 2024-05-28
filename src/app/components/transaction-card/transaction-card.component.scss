@@ -1,0 +1,28 @@
+.flex-box {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+    flex-wrap: wrap;
+
+    .left {
+        min-width: clamp(0px, 100%, 150px);
+        p {
+            margin-top: 12px;
+        }
+    }
+
+    .right{
+        display: flex;
+        align-items: center;
+        gap: 12px;
+
+        .paragraph {
+            text-transform: capitalize;
+        }
+
+        button {
+            color: var(--color-blue1);
+        }
+    }
+}

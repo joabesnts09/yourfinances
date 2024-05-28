@@ -1,0 +1,23 @@
+* {
+    padding: 0;
+    margin: 0;
+    border: none;
+    box-sizing: border-box;
+    background: transparent;
+}
+
+ul, ol {
+    list-style: none;
+}
+
+img {
+    max-width: 100%;
+}
+
+button, a {
+    cursor: pointer;
+}
+
+a {
+    text-decoration: none;
+}
